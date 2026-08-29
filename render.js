@@ -211,12 +211,21 @@
 
     var html = '';
     if (upcoming.length) {
-      html += '<p class="year year-upcoming">Upcoming</p>' + upcoming.map(talkHTML).join('');
+      html += '<p class="talk-group">Upcoming</p>' + upcoming.map(talkHTML).join('');
     }
-    var g = groupByYear(past);
-    html += g.years.map(function (y) {
-      return '<p class="year">' + esc(y) + '</p>' + g.map[y].map(talkHTML).join('');
-    }).join('');
+
+    function block(label, items) {
+      if (!items.length) return '';
+      var g = groupByYear(items);
+      return '<p class="talk-group">' + label + '</p>' + g.years.map(function (y) {
+        return '<p class="year">' + esc(y) + '</p>' + g.map[y].map(talkHTML).join('');
+      }).join('');
+    }
+
+    html += block('Conference presentations',
+                  past.filter(function (t) { return t.kind === 'conference'; }));
+    html += block('Invited talks &amp; seminars',
+                  past.filter(function (t) { return t.kind !== 'conference'; }));
     target.innerHTML = html;
   }
 
@@ -327,8 +336,42 @@
   }
 
   /* ── Boot: run whatever this page needs ───────────────────────────────── */
+  /* Gentle reveal as sections come into view, and a header that gains a
+     hairline once you scroll. Both are skipped if the visitor prefers
+     reduced motion. */
+  function wireScroll() {
+    var reduce = window.matchMedia &&
+                 window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var head = document.querySelector('header');
+    if (head) {
+      var onScroll = function () {
+        head.classList.toggle('scrolled', window.scrollY > 8);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    if (reduce || !('IntersectionObserver' in window)) return;
+
+    var targets = document.querySelectorAll(
+      'section, .hero > div, .hero aside, .pub, .entry, .honour, .listing, .biobox, .map-card');
+    if (!targets.length) return;
+
+    Array.prototype.forEach.call(targets, function (el) { el.classList.add('reveal'); });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+
+    Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     wireCommon();
+    wireScroll();
 
     var pubs = $('pub-list');
     if (pubs && S.publications) {
@@ -338,9 +381,9 @@
 
     var recent = $('pub-recent');
     if (recent && S.publications) {
-      recent.innerHTML = S.publications.slice()
-        .sort(byYearDesc).filter(function (p) { return p.first; })
-        .slice(0, 3).map(pubHTML).join('');
+      var picked = S.publications.filter(function (p) { return p.featured; });
+      if (!picked.length) picked = S.publications.filter(function (p) { return p.first; });
+      recent.innerHTML = picked.slice().sort(byYearDesc).slice(0, 3).map(pubHTML).join('');
     }
 
     var talks = $('talk-list');

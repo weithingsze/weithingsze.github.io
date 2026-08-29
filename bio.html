@@ -99,12 +99,6 @@
     <p class="section-title">Biography</p>
     <div id="bios"></div>
   </section>
-
-  <div class="edit-banner" style="margin-top:10px">
-    Edit these three bios in <code>data.js</code> (or through <code>editor.html</code>).
-    Add your photo to the same folder as the site files, named to match the
-    <code>headshot</code> setting.
-  </div>
 </main>
 
 <footer>
@@ -128,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ? '<img src="' + esc(B.headshot) + '" alt="Portrait of Wei Thing Sze" ' +
       'onerror="this.parentNode.innerHTML=\'<div class=&quot;noshot&quot;>Add your photo as ' +
       esc(B.headshot) + ' in the site folder</div>\'">' +
-      '<p><a href="' + esc(B.headshot) + '" download>Download photo</a></p>'
+      ''
     : '<div class="noshot">No headshot set yet</div>';
 
   /* quick facts organisers always ask for */

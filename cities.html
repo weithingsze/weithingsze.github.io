@@ -92,7 +92,7 @@
 <main class="wrap">
   <div class="page-head">
     <h1>Cities</h1>
-    <p>Places I've spent time in — for conferences, collaborations, fieldwork, and otherwise. Tap a dot to see where and when.</p>
+    <p>Places I've spent time in — for conferences, work, and otherwise.</p>
   </div>
 
   <div class="counters">
@@ -110,14 +110,7 @@
       <g id="label-halos"></g>
       <g id="labels"></g>
     </svg>
-    <p class="map-hint">Hover or tap a marker for details &middot; scroll sideways on a narrow screen</p>
-  </div>
-
-  <div id="city-list"></div>
-
-  <div class="edit-banner" style="margin-top:40px">
-    To add a city, add a line to the <code>cities</code> list in <code>data.js</code>
-    with its latitude and longitude — the map and counters update themselves.
+    <p class="map-hint">Hover or tap a marker for details</p>
   </div>
 </main>
 
@@ -305,35 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', function () { tip.classList.remove('show'); });
 
-  /* ---------- grouped list, linked to the map ---------- */
-  var ORDER = ['Asia', 'Europe', 'Americas', 'Africa', 'Oceania', 'Other'];
-  var groups = {};
-  cities.forEach(function (c, i) {
-    c._i = i;
-    var r = c.region || 'Other';
-    (groups[r] = groups[r] || []).push(c);
-  });
-
-  var list = document.getElementById('city-list');
-  ORDER.filter(function (r) { return groups[r]; }).forEach(function (r) {
-    var sec = document.createElement('section');
-    sec.className = 'region';
-    var h = document.createElement('h2');
-    h.textContent = r + ' · ' + groups[r].length;
-    sec.appendChild(h);
-    groups[r].slice().sort(function (a, b) { return a.name.localeCompare(b.name); })
-      .forEach(function (c) {
-        var row = document.createElement('div');
-        row.className = 'crow';
-        row.innerHTML = '<span class="name">' + c.name + '</span>' +
-                        '<span class="country">' + c.country + '</span>' +
-                        '<span class="note">' + (c.note || '') + '</span>';
-        row.addEventListener('mouseenter', function () { if (c._show) c._show(); });
-        row.addEventListener('mouseleave', function () { if (c._hide) c._hide(); });
-        sec.appendChild(row);
-      });
-    list.appendChild(sec);
-  });
 });
 </script>
 </body>

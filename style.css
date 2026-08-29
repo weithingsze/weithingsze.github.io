@@ -61,7 +61,24 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 
 /* ── Header ───────────────────────────────────────────────────────────── */
-header { border-bottom: 1px solid var(--hairline); background: var(--paper); }
+header {
+  border-bottom: 1px solid var(--hairline); background: rgba(255,255,255,.88);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+header.scrolled { border-bottom-color: var(--rule); box-shadow: 0 1px 16px rgba(21,23,27,.055); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.in { opacity: 1; transform: none;
+             transition: opacity .62s cubic-bezier(.22,.61,.36,1),
+                         transform .62s cubic-bezier(.22,.61,.36,1); }
+.areas .card { transition: background .2s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
 .header-inner {
   display: flex; align-items: baseline; justify-content: space-between;
   padding: 26px 0; flex-wrap: wrap; gap: 14px;
@@ -96,18 +113,24 @@ h1 em { font-style: italic; color: var(--accent); }
 .page-lede { font-size: 1.02rem; color: var(--body); max-width: 40em; margin-top: 26px; }
 
 .section-title {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
-  letter-spacing: 0.17em; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 30px; text-indent: -0.08em;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 0.86rem; font-weight: 600;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ink);
+  margin-bottom: 28px;
 }
 .year {
   font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
   letter-spacing: 0.15em; color: var(--muted);
   margin: 52px 0 0; padding-bottom: 9px; border-bottom: 1px solid var(--rule);
 }
-section { padding: 68px 0; border-top: 1px solid var(--hairline); }
+section { padding: 84px 0; border-top: 1px solid var(--hairline); }
+section:first-of-type { border-top: none; }
 
-.year-upcoming { color: var(--accent); border-bottom-color: var(--accent); margin-top: 8px; }
+.talk-group {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 0.86rem; font-weight: 600;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ink);
+  margin: 56px 0 4px; padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+}
+.talk-group:first-child { margin-top: 12px; }
 .entry.is-upcoming .when .mo { color: var(--accent); }
 .entry.is-upcoming h3 { color: var(--ink); }
 
@@ -237,11 +260,12 @@ section { padding: 68px 0; border-top: 1px solid var(--hairline); }
 .areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
          background: var(--hairline); border: 1px solid var(--hairline); }
 .areas .card { border: none; border-radius: 0; background: var(--paper);
-                transition: background .2s ease; }
+                transition: background .2s ease; padding: 26px 24px; display: flex; align-items: center; min-height: 96px; }
 .areas .card:hover { background: var(--surface); }
+.areas .card:hover h3 { color: var(--accent); }
 .area h3 {
   font-family: 'Newsreader', serif; font-weight: 500;
-  font-size: 1.28rem; letter-spacing: -0.012em; color: var(--ink); margin-bottom: 12px;
+  font-size: 1.2rem; line-height: 1.35; letter-spacing: -0.012em; color: var(--ink);
 }
 .area p { font-size: 0.925rem; color: var(--muted); }
 

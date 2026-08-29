@@ -143,30 +143,12 @@
     <div class="wrap">
       <p class="section-title">Research areas</p>
       <div class="areas">
-        <div class="card area">
-          <h3>Digital health &amp; lifestyle interventions</h3>
-          <p>Designing and evaluating mobile and AI-supported tools for diet, physical activity, and everyday health behaviour.</p>
-        </div>
-        <div class="card area">
-          <h3>Behavior change</h3>
-          <p>The theory underneath the tools: how people change what they do, and why some don't respond.</p>
-        </div>
-        <div class="card area">
-          <h3>Artificial intelligence in health</h3>
-          <p>Generative-AI features in clinical use — how they are specified, validated against clinical standards, and made safe.</p>
-        </div>
-        <div class="card area">
-          <h3>Personalized health interventions</h3>
-          <p>Matching what an intervention offers to the person receiving it, rather than delivering the same thing to everyone.</p>
-        </div>
-        <div class="card area">
-          <h3>User experience research</h3>
-          <p>Understanding how people actually use health tools, and letting that shape what gets built.</p>
-        </div>
-        <div class="card area">
-          <h3>Evaluation &amp; acceptance</h3>
-          <p>Whether an intervention works, whether people will accept it, and what the evidence needs to look like.</p>
-        </div>
+        <div class="card area"><h3>Digital health &amp; lifestyle interventions</h3></div>
+        <div class="card area"><h3>Health behavior change</h3></div>
+        <div class="card area"><h3>Artificial intelligence in health</h3></div>
+        <div class="card area"><h3>Personalization in health interventions</h3></div>
+        <div class="card area"><h3>User experience with digital health interventions</h3></div>
+        <div class="card area"><h3>Evaluation and acceptance of AI-based interventions</h3></div>
       </div>
     </div>
   </section>
@@ -216,20 +198,23 @@
     <div class="contact-grid">
       <div class="card msg-box">
         <label for="f-name">Your name</label>
-        <input id="f-name" type="text" placeholder="Jane Tanaka">
+        <input id="f-name" type="text">
+
         <label for="f-subject">Subject</label>
-        <input id="f-subject" type="text" placeholder="Collaboration on digital health">
+        <input id="f-subject" type="text">
+
         <label for="f-msg">Message</label>
-        <textarea id="f-msg" rows="5" placeholder="Write your message here…"></textarea>
-        <button id="f-send" type="button">Open in my email app &rarr;</button>
-        <p class="msg-note">This opens your own email program with the message ready to send.</p>
+        <textarea id="f-msg" rows="5"></textarea>
+
+        <button id="f-send" type="button">Send</button>
+        <p class="msg-note">Opens your email app with the message ready to send.</p>
       </div>
 
       <div class="direct">
         <p class="direct-lbl">Or reach me directly</p>
         <p><a data-email href="#">loading…</a></p>
         <ul class="link-list">
-          <li><a href="bio.html">Bio and headshot</a></li>
+          <li><a href="bio.html">Bio</a></li>
           <li><a data-link="linkedin" href="#">LinkedIn</a></li>
           <li><a data-link="scholar" href="#">Google Scholar</a></li>
           <li><a data-link="orcid" href="#">ORCID</a></li>
@@ -256,5 +241,6 @@ document.getElementById('f-send').addEventListener('click', function () {
     '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });
 </script>
+
 </body>
 </html>

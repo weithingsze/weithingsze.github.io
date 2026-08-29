@@ -28,9 +28,9 @@ window.SITE = {
   bio: {
     headshot: "headshot.jpg",
     pronunciation: "",
-    short: "I'm an Assistant Professor at The University of Tokyo, appointed jointly in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, where I research digital health and lifestyle interventions for people living with type 2 diabetes.",
-    medium: "I'm an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine, and I teach digital health and public health informatics in the Master of Public Health programme. A pharmacist by training, I research digital health and lifestyle interventions for people living with type 2 diabetes, with a particular focus on AI-supported tools and the behavior change theory that underpins them. I received the Academic Paper Award from the Japan Association of Medical Informatics in 2024.",
-    long: "I'm an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. I lead clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teach digital health and public health informatics in the Master of Public Health programme. My interests centre on patient-centred healthcare and user-centred design in digital health, and I work across a range of qualitative and quantitative methods. I trained as a pharmacist in Malaysia and practised with the Ministry of Health, including as head of a hospital pharmacy department. I hold an MSc in Clinical Pharmacy from University College London, completed as a Chevening Scholar, and a PhD in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar. I received the Academic Paper Award from the Japan Association of Medical Informatics in 2024.",
+    short: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, appointed jointly in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, where she researches digital health and lifestyle interventions for people living with type 2 diabetes.",
+    medium: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. A pharmacist by training, she researches digital health and lifestyle interventions for people living with type 2 diabetes, with a particular focus on AI-supported tools and the behavior change theory that underpins them. She teaches digital health and public health informatics in the Master of Public Health programme, and received the Academic Paper Award from the Japan Association of Medical Informatics in 2024.",
+    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a pharmacist and practised with the Ministry of Health. She is a Chevening Scholar, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
   },
 
   /* ── EDUCATION ── */
@@ -39,7 +39,6 @@ window.SITE = {
       degree: "PhD in Health Sciences (Health Informatics)",
       institution: "The University of Tokyo",
       place: "Japan",
-      years: "2023–2026",
     },
     {
       degree: "MSc Clinical Pharmacy, International Practice and Policy",
@@ -61,7 +60,7 @@ window.SITE = {
     { name: "Mandarin Chinese", level: "Fluent" },
     { name: "Cantonese",        level: "Fluent" },
     { name: "Malay",            level: "Fluent" },
-    { name: "Japanese",         level: "Basic conversational" },
+    { name: "Japanese",         level: "Conversational" },
   ],
 
   /* ── ADDITIONAL TRAINING ── shown under Education on the home page.
@@ -69,11 +68,15 @@ window.SITE = {
   training: [
     {
       title: "Design thinking",
-      detail: "Graduate coursework with Prof. Miles Pennington, The University of Tokyo — worked through the full design thinking process to develop an environmentally friendly personal transport concept.",
+      detail: "Completed coursework during my PhD with Prof. Miles Pennington, The University of Tokyo — worked through the full design thinking process to develop an environmentally friendly personal transport concept.",
     },
     {
       title: "Strategic foresight",
-      detail: "Graduate coursework on generative AI and media; used futures methods to develop a scenario on personalized, human-like AI assistants for health providers.",
+      detail: "Completed coursework during my PhD on generative AI and media; used futures methods to develop a scenario on personalized, human-like AI assistants for health providers.",
+    },
+    {
+      title: "Qualitative analysis",
+      detail: "Gathering and Analysing Qualitative Data — Institute for Social Science Research, The University of Queensland.",
     },
   ],
 
@@ -87,6 +90,7 @@ window.SITE = {
       detail: "75(Suppl 1):1286-OR",
       doi: "10.2337/db26-1286-OR",
       first: true,
+      featured: true,
       tags: ["Conference abstract"],
     },
     {
@@ -97,6 +101,7 @@ window.SITE = {
       detail: "14:e78019",
       doi: "10.2196/78019",
       first: true,
+      featured: true,
       tags: ["RCT protocol"],
     },
     {
@@ -133,6 +138,7 @@ window.SITE = {
       detail: "145:104481",
       doi: "10.1016/j.jbi.2023.104481",
       first: true,
+      featured: true,
       tags: ["Award-winning"],
     },
     {
@@ -230,11 +236,11 @@ window.SITE = {
   /* ── TEACHING: courses you convene ── */
   courses: [
     {
-      name: "Digital Health",
+      name: "Digital Health & Public Health Informatics",
       programme: "Master of Public Health (MPH)",
-      institution: "Graduate School of Medicine, The University of Tokyo",
+      institution: "School of Public Health, Graduate School of Medicine, The University of Tokyo",
       years: "2026–present",
-      summary: "An introduction to digital health for public health students: what the field covers, how interventions are evaluated, and how policy and infrastructure shape what is possible in practice. Taught in English, with Japan-specific case material throughout.",
+      summary: "Alongside lectures, I mentor students in practicals and workshops on digital health innovation.",
     },
   ],
 
@@ -259,22 +265,6 @@ window.SITE = {
       title: "Evaluation, Evidence Generation, and Exercise Orientation",
       course: "Digital Health, MPH",
       year: 2026,
-    },
-  ],
-
-  /* ── CONVENING & SUPERVISION ── shown at the foot of the Teaching page ── */
-  service: [
-    {
-      title: "Journal club",
-      detail: "Convene the group's research journal club — selecting papers, setting the schedule, and leading discussion.",
-    },
-    {
-      title: "Visiting students seminar",
-      detail: "Lead the seminar programme for visiting students from China.",
-    },
-    {
-      title: "Research supervision",
-      detail: "Supervise undergraduate and graduate students in clinical research.",
     },
   ],
 
@@ -392,6 +382,14 @@ window.SITE = {
   /* ── AWARDS & HONOURS ── */
   awards: [
     {
+      name: "KAKENHI Grant-in-Aid for Research Activity Start-up",
+      body_org: "Japan Society for the Promotion of Science (JSPS)",
+      year: 2026,
+      place: "Japan",
+      blurb: "JSPS funding for researchers beginning an independent research programme.",
+      tags: ["Research funding"],
+    },
+    {
       name: "Academic Paper Award",
       body_org: "Japan Association of Medical Informatics (JAMI)",
       year: 2024,
@@ -407,7 +405,7 @@ window.SITE = {
       body_org: "Japanese Government (Monbukagakusho)",
       year: 2022,
       place: "Japan",
-      blurb: "Japan's national government scholarship for international students and researchers, funding doctoral study from 2022 to 2026.",
+      blurb: "Japan's national government scholarship for international students and researchers, funding doctoral study.",
       tags: ["Doctoral funding"],
     },
     {
@@ -417,14 +415,6 @@ window.SITE = {
       place: "Malaysia",
       paper: "Knowledge, attitude, and practice among Malaysian Private Hospital Pharmacists towards Medication Review",
       tags: ["National"],
-    },
-    {
-      name: "Internal Research Grant",
-      body_org: "SEGi University",
-      year: 2019,
-      place: "Malaysia",
-      blurb: "RM20,000 awarded as principal investigator for \"Investigating the Feasibility of Medicines Use Review Service in Private Health Institutions\".",
-      tags: ["Principal investigator"],
     },
     {
       name: "Chevening Scholarship",
@@ -439,33 +429,29 @@ window.SITE = {
       body_org: "Malaysia Pharmacy Innovation and Creativity Convention",
       year: 2016,
       place: "Malaysia",
-      tags: ["National"],
-    },
-    {
-      name: "Undergraduate Scholarship",
-      body_org: "International Medical University",
-      year: 2008,
-      place: "Malaysia",
     },
   ],
 
   /* ── COMMUNITY & SERVICE ── */
-  communityIntro: "I value community as much as I value my professional life, and I enjoy connecting people. Feel free to reach out if you'd like to join anything here.",
+  communityIntro: "I value community as much as I value my professional life, and I enjoy connecting people. Feel free to reach out if you are interested in attending any of these events while you are in Tokyo.",
 
   community: [
     {
       name: "ICA Tokyo",
       role: "Guest Experience Team · Reach Café",
       location: "Bunkyo-ku, Tokyo",
-      blurb: "I serve on the Guest Experience Team and at Reach Café, both as ways of connecting with the wider community.",
+      blurb: "I volunteer on the Guest Experience Team and at Reach Café, both as ways of connecting with the wider community.",
       link: "https://icatokyo.com/",
       tags: ["Tokyo", "International community"],
     },
     {
-      name: "TMP Running Club",
-      role: "Member",
+      name: "Chi Alpha Japan",
+      location: "Nakano, Tokyo",
+      tags: ["Tokyo"],
+    },
+    {
+      name: "Tokyo Marunouchi Partnership Running Club",
       location: "Marunouchi, Tokyo",
-      blurb: "The Tokyo Marunouchi Partnership running club.",
       tags: ["Tokyo", "Running"],
     },
   ],
@@ -474,12 +460,14 @@ window.SITE = {
      Add one by clicking the map in editor.html. */
   cities: [
     /* ── Asia ── */
-    { name: "Tokyo",            country: "Japan",       region: "Asia", lat: 35.68, lng: 139.69, note: "Home base since 2022" },
+    { name: "Tokyo",            country: "Japan",       region: "Asia", lat: 35.68, lng: 139.69, note: "Home since 2022" },
     { name: "Seoul",            country: "South Korea", region: "Asia", lat: 37.57, lng: 126.98, note: "Research seminar at Seoul National University" },
     { name: "Busan",            country: "South Korea", region: "Asia", lat: 35.18, lng: 129.08 },
     { name: "Jeju",             country: "South Korea", region: "Asia", lat: 33.50, lng: 126.53 },
     { name: "Beijing",          country: "China",       region: "Asia", lat: 39.90, lng: 116.41 },
     { name: "Shanghai",         country: "China",       region: "Asia", lat: 31.23, lng: 121.47 },
+    { name: "Suzhou",           country: "China",       region: "Asia", lat: 31.30, lng: 120.59 },
+    { name: "Nanjing",          country: "China",       region: "Asia", lat: 32.06, lng: 118.80 },
     { name: "Guangzhou",        country: "China",       region: "Asia", lat: 23.13, lng: 113.26 },
     { name: "Wuhan",            country: "China",       region: "Asia", lat: 30.59, lng: 114.30 },
     { name: "Yunnan",           country: "China",       region: "Asia", lat: 25.04, lng: 102.71 },
@@ -491,9 +479,15 @@ window.SITE = {
     { name: "Chiang Rai",       country: "Thailand",    region: "Asia", lat: 19.91, lng: 99.84 },
     { name: "Bali",             country: "Indonesia",   region: "Asia", lat: -8.65, lng: 115.22 },
     { name: "Bandung",          country: "Indonesia",   region: "Asia", lat: -6.92, lng: 107.61 },
-    { name: "Yogyakarta",       country: "Indonesia",   region: "Asia", lat: -7.80, lng: 110.36, note: "Keynote, national cardiovascular conference" },
     { name: "Hanoi",            country: "Vietnam",     region: "Asia", lat: 21.03, lng: 105.85 },
     { name: "Ho Chi Minh City", country: "Vietnam",     region: "Asia", lat: 10.82, lng: 106.63 },
+    { name: "Delhi",            country: "India",       region: "Asia", lat: 28.61, lng: 77.21 },
+    { name: "Jaipur",           country: "India",       region: "Asia", lat: 26.92, lng: 75.79 },
+    { name: "Jodhpur",          country: "India",       region: "Asia", lat: 26.24, lng: 73.02 },
+    { name: "Kathmandu",        country: "Nepal",       region: "Asia", lat: 27.72, lng: 85.32 },
+    { name: "Pokhara",          country: "Nepal",       region: "Asia", lat: 28.21, lng: 83.99 },
+    { name: "Colombo",          country: "Sri Lanka",   region: "Asia", lat: 6.93,  lng: 79.86 },
+    { name: "Sigiriya",         country: "Sri Lanka",   region: "Asia", lat: 7.96,  lng: 80.76 },
     { name: "Dubai",            country: "UAE",         region: "Asia", lat: 25.20, lng: 55.27 },
     { name: "Taipei",              country: "Taiwan",    region: "Asia", lat: 25.03, lng: 121.57 },
     { name: "Siem Reap",           country: "Cambodia",  region: "Asia", lat: 13.36, lng: 103.86 },
@@ -504,22 +498,26 @@ window.SITE = {
     { name: "Bandar Seri Begawan", country: "Brunei",    region: "Asia", lat: 4.89,  lng: 114.94 },
 
     /* ── Europe ── */
-    { name: "London",  country: "UK",     region: "Europe", lat: 51.51, lng: -0.13, note: "MSc at UCL" },
+    { name: "London",     country: "UK", region: "Europe", lat: 51.51, lng: -0.13, note: "MSc at University College London" },
+    { name: "Nottingham", country: "UK", region: "Europe", lat: 52.95, lng: -1.15, note: "Cultural exchange working holiday" },
+    { name: "Edinburgh",  country: "UK", region: "Europe", lat: 55.95, lng: -3.19 },
+    { name: "Newcastle",  country: "UK", region: "Europe", lat: 54.98, lng: -1.61 },
+    { name: "York",       country: "UK", region: "Europe", lat: 53.96, lng: -1.08 },
     { name: "Paris",   country: "France", region: "Europe", lat: 48.86, lng: 2.35 },
-    { name: "Gers",    country: "France", region: "Europe", lat: 43.65, lng: 0.59,  note: "Gascony countryside" },
+    { name: "Gers",    country: "France", region: "Europe", lat: 43.65, lng: 0.59,  note: "Gascony countryside", note: "Cultural exchange working holiday" },
     { name: "Rome",    country: "Italy",  region: "Europe", lat: 41.90, lng: 12.50 },
-    { name: "Umbria",  country: "Italy",  region: "Europe", lat: 43.11, lng: 12.39 },
+    { name: "Umbria",  country: "Italy",  region: "Europe", lat: 43.11, lng: 12.39, note: "Cultural exchange working holiday" },
     { name: "Barcelona", country: "Spain", region: "Europe", lat: 41.39, lng: 2.17 },
     { name: "Amsterdam", country: "Netherlands", region: "Europe", lat: 52.37, lng: 4.90 },
     { name: "Brussels",  country: "Belgium",     region: "Europe", lat: 50.85, lng: 4.35 },
     { name: "Dublin",    country: "Ireland",     region: "Europe", lat: 53.35, lng: -6.26 },
-    { name: "Bugøynes", country: "Norway",     region: "Europe", lat: 69.97, lng: 29.64, note: "Arctic fishing village on the Varangerfjord" },
+    { name: "Bugøynes", country: "Norway",     region: "Europe", lat: 69.97, lng: 29.64, note: "Cultural exchange working holiday, Arctic Norway" },
     { name: "Luxembourg", country: "Luxembourg", region: "Europe", lat: 49.61, lng: 6.13 },
 
     /* ── Americas ── */
-    { name: "New Orleans",   country: "USA", region: "Americas", lat: 29.95, lng: -90.07,  note: "ADA Scientific Sessions 2026" },
+    { name: "New Orleans",   country: "USA", region: "Americas", lat: 29.95, lng: -90.07,  note: "ADA Scientific Sessions 2026", note: "ADA Scientific Sessions 2026" },
     { name: "San Francisco", country: "USA", region: "Americas", lat: 37.77, lng: -122.42, note: "Diabetes Technology Meeting 2025" },
-    { name: "Chicago",       country: "USA", region: "Americas", lat: 41.88, lng: -87.63,  note: "ADA Scientific Sessions 2025" },
+    { name: "Chicago",       country: "USA", region: "Americas", lat: 41.88, lng: -87.63,  note: "ADA Scientific Sessions 2025", note: "ADA Scientific Sessions 2025" },
     { name: "Seattle",       country: "USA", region: "Americas", lat: 47.61, lng: -122.33 },
 
     /* ── Oceania ── */
