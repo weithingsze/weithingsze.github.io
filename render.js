@@ -39,7 +39,7 @@
       el.textContent = S.email;
       el.setAttribute('href', 'mailto:' + S.email);
     });
-    var links = { scholar: S.scholar, orcid: S.orcid, github: S.github, linkedin: S.linkedin };
+    var links = { scholar: S.scholar, orcid: S.orcid, github: S.github, linkedin: S.linkedin, researchgate: S.researchgate };
     Object.keys(links).forEach(function (k) {
       var el = document.querySelector('[data-link="' + k + '"]');
       if (!el) return;

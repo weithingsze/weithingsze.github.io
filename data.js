@@ -15,6 +15,8 @@ window.SITE = {
   email: "weithing@gmail.com",
   linkedin: "https://www.linkedin.com/in/weithingsze/",
   scholar: "https://scholar.google.com/citations?user=NYyczMIAAAAJ&hl=en",
+  researchgate: "https://www.researchgate.net/profile/Wei-Thing-Sze-3",
+  emailWork: "weithing.sze@iii.u-tokyo.ac.jp",
   orcid: "https://orcid.org/0000-0003-1054-6886",
   github: "",
 
@@ -393,7 +395,7 @@ window.SITE = {
       tags: ["National"],
     },
     {
-      name: "Internal Research Grant",
+      name: "Institutional Level Research Grant",
       body_org: "SEGi University",
       year: 2019,
       place: "Malaysia",

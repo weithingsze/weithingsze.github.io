@@ -131,15 +131,24 @@ document.addEventListener('DOMContentLoaded', function () {
   var facts = [
     ['Full name', 'Wei Thing Sze, PhD'],
     ['Title', 'Assistant Professor'],
-    ['Appointments', 'Interfaculty Initiative in Information Studies<br>&amp; Department of Health and Behavioral Informatics<br>&amp; Therapeutics (HABIT), Graduate School of Medicine'],
-    ['Institution', 'The University of Tokyo'],
-    ['Highest degree', top ? esc(top.degree) + ', ' + esc(top.institution) + ' (' + esc(top.years) + ')' : null],
+    ['Appointments',
+      '<a href="https://www.iii.u-tokyo.ac.jp/">Interfaculty Initiative in Information Studies</a>,<br>' +
+      'The University of Tokyo' +
+      '<span style="display:block;margin-top:10px">Department of Health and Behavioral Informatics ' +
+      '&amp; Therapeutics (HABIT) ' +
+      '(<a href="https://waki-lab.jp/">Waki DTx Lab</a>),<br>' +
+      'Graduate School of Medicine,<br>The University of Tokyo</span>'],
+    ['Highest degree', top ? esc(top.degree) + ', ' + esc(top.institution) : null],
     ['Languages', (S.languages || []).length
       ? S.languages.map(function (l) { return esc(l.name); }).join(', ') : null],
-    ['Pronunciation', B.pronunciation || null],
-    ['Email', S.email ? '<a href="mailto:' + esc(S.email) + '">' + esc(S.email) + '</a>' : null],
+    ['Email',
+      (S.email ? '<a href="mailto:' + esc(S.email) + '">' + esc(S.email) + '</a>' : '') +
+      (S.emailWork ? '<br><a href="mailto:' + esc(S.emailWork) + '">' + esc(S.emailWork) + '</a>' : '')],
     ['LinkedIn', S.linkedin ? '<a href="' + esc(S.linkedin) + '">Profile</a>' : null],
-    ['Scholar', S.scholar ? '<a href="' + esc(S.scholar) + '">Google Scholar</a>' : null]
+    ['Research profile',
+      (S.scholar ? '<a href="' + esc(S.scholar) + '">Google Scholar</a>' : '') +
+      (S.researchgate ? '<br><a href="' + esc(S.researchgate) + '">ResearchGate</a>' : '') +
+      (S.orcid ? '<br><a href="' + esc(S.orcid) + '">ORCID</a>' : '')]
   ].filter(function (f) { return f[1]; });
 
   document.getElementById('facts').innerHTML = facts.map(function (f) {
