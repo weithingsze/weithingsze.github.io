@@ -30,7 +30,7 @@ window.SITE = {
   bio: {
     headshot: "headshot.jpg",
     pronunciation: "",
-    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a clinical pharmacist and practised in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic, and Medication Awareness community events. She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. She works across disciplines, developing and evaluating digital health interventions together with clinicians, healthcare practitioners, and software developers. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a clinical pharmacist and practised in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic, and Medication Awareness community events. She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
   },
 
   /* ── EDUCATION ── */
@@ -73,6 +73,10 @@ window.SITE = {
     {
       title: "Strategic foresight",
       detail: "Completed coursework during my PhD on generative AI and media; used futures methods to develop a scenario on personalized, human-like AI assistants for health providers.",
+    },
+    {
+      title: "Implementation science",
+      detail: "Implementation Science Bootcamp — Yale University and Universiti Malaya.",
     },
     {
       title: "Qualitative analysis",
