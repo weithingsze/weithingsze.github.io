@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Bio — Wei Thing Sze, PhD</title>
+<meta name="description" content="Speaker biography in three lengths, headshot, and affiliation details for conference organisers and event hosts.">
+<style>
+  .biobox { border-top: 1px solid var(--hairline); padding: 24px 0 4px; }
+  .biobox:first-of-type { border-top: 2px solid var(--ink); }
+  .biobox-head { display: flex; justify-content: space-between; align-items: baseline;
+                 gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+  .biobox-label { font-family: 'IBM Plex Mono', monospace; font-size: .66rem;
+                  letter-spacing: .17em; text-transform: uppercase; color: var(--ink); }
+  .biobox-count { font-family: 'IBM Plex Mono', monospace; font-size: .64rem;
+                  color: var(--muted); letter-spacing: .06em; }
+  .biobox p.text { font-size: .97rem; line-height: 1.75; max-width: 42em; }
+  .copy-btn { font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+    letter-spacing: .12em; text-transform: uppercase; background: transparent;
+    color: var(--muted); border: 1px solid var(--hairline); border-radius: 2px;
+    padding: 6px 14px; cursor: pointer; transition: all .16s ease; }
+  .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .copy-btn.done { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .kit-grid { display: grid; grid-template-columns: 200px 1fr; gap: 44px;
+              align-items: start; margin-top: 40px; }
+  .shot img { width: 100%; border-radius: 2px; display: block; }
+  .shot .noshot { width: 100%; aspect-ratio: 1; border: 1px dashed var(--rule);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    color: var(--muted); font-size: .8rem; padding: 18px; }
+  .shot p { font-size: .74rem; color: var(--muted); margin-top: 10px;
+            font-family: 'IBM Plex Mono', monospace; letter-spacing: .05em; }
+
+  .facts-list { list-style: none; padding: 0; }
+  .facts-list li { display: flex; gap: 20px; padding: 11px 0;
+                   border-bottom: 1px solid var(--hairline); font-size: .91rem; }
+  .facts-list li:last-child { border-bottom: none; }
+  .facts-list .k { font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+    min-width: 9.5em; padding-top: 4px; }
+
+  @media (max-width: 700px) { .kit-grid { grid-template-columns: 1fr; gap: 28px; } }
+</style>
+
+<!-- Social preview: how this page looks when shared on LinkedIn, X, Slack, WhatsApp.
+     IMPORTANT: replace weithingsze below with your real GitHub username. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wei Thing Sze, PhD">
+<meta property="og:title" content="Bio — Wei Thing Sze, PhD">
+<meta property="og:description" content="Speaker biography in three lengths, headshot, and affiliation details for conference organisers and event hosts.">
+<meta property="og:url" content="https://weithingsze.github.io/bio.html">
+<meta property="og:image" content="https://weithingsze.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wei Thing Sze, PhD — Assistant Professor, Interfaculty Initiative in Information Studies and Graduate School of Medicine, The University of Tokyo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bio — Wei Thing Sze, PhD">
+<meta name="twitter:description" content="Speaker biography in three lengths, headshot, and affiliation details for conference organisers and event hosts.">
+<meta name="twitter:image" content="https://weithingsze.github.io/preview.png">
+<link rel="canonical" href="https://weithingsze.github.io/bio.html">
+</head>
+<body data-page="bio.html">
+
+<header>
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html">Wei Thing Sze</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="awards.html">Awards</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="community.html">Community</a>
+      <a href="cities.html">Cities</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="index.html#contact">Reach out</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <div class="page-head">
+    <h1>Bio</h1>
+  </div>
+
+  <div class="kit-grid">
+    <div class="shot" id="shot"></div>
+    <div>
+      <ul class="facts-list" id="facts"></ul>
+    </div>
+  </div>
+
+  <section style="border-top:1px solid var(--hairline);margin-top:40px;padding:40px 0 0">
+    <p class="section-title">Biography</p>
+    <div id="bios"></div>
+  </section>
+
+  <div class="edit-banner" style="margin-top:10px">
+    Edit these three bios in <code>data.js</code> (or through <code>editor.html</code>).
+    Add your photo to the same folder as the site files, named to match the
+    <code>headshot</code> setting.
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small">&copy; 2026 Wei Thing Sze &middot; <a href="index.html">Back to home</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="render.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var S = window.SITE || {};
+  var B = S.bio || {};
+  var esc = function (t) { return String(t == null ? '' : t)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
+
+  /* headshot */
+  var shot = document.getElementById('shot');
+  shot.innerHTML = B.headshot
+    ? '<img src="' + esc(B.headshot) + '" alt="Portrait of Wei Thing Sze" ' +
+      'onerror="this.parentNode.innerHTML=\'<div class=&quot;noshot&quot;>Add your photo as ' +
+      esc(B.headshot) + ' in the site folder</div>\'">' +
+      '<p><a href="' + esc(B.headshot) + '" download>Download photo</a></p>'
+    : '<div class="noshot">No headshot set yet</div>';
+
+  /* quick facts organisers always ask for */
+  var top = (S.education && S.education[0]) || null;
+  var facts = [
+    ['Full name', 'Wei Thing Sze, PhD'],
+    ['Title', 'Assistant Professor'],
+    ['Appointments', 'Interfaculty Initiative in Information Studies<br>&amp; Department of Health and Behavioral Informatics<br>&amp; Therapeutics (HABIT), Graduate School of Medicine'],
+    ['Institution', 'The University of Tokyo'],
+    ['Highest degree', top ? esc(top.degree) + ', ' + esc(top.institution) + ' (' + esc(top.years) + ')' : null],
+    ['Languages', (S.languages || []).length
+      ? S.languages.map(function (l) { return esc(l.name); }).join(', ') : null],
+    ['Pronunciation', B.pronunciation || null],
+    ['Email', S.email ? '<a href="mailto:' + esc(S.email) + '">' + esc(S.email) + '</a>' : null],
+    ['LinkedIn', S.linkedin ? '<a href="' + esc(S.linkedin) + '">Profile</a>' : null],
+    ['Scholar', S.scholar ? '<a href="' + esc(S.scholar) + '">Google Scholar</a>' : null]
+  ].filter(function (f) { return f[1]; });
+
+  document.getElementById('facts').innerHTML = facts.map(function (f) {
+    return '<li><span class="k">' + f[0] + '</span><span>' + f[1] + '</span></li>';
+  }).join('');
+
+  /* the three bios */
+  var lengths = [
+    ['short', 'Short', 'One or two sentences — for a programme listing or a slide'],
+    ['medium', 'Medium', 'A paragraph — for a session description or newsletter'],
+    ['long', 'Long', 'Full introduction — for a keynote intro or press release']
+  ];
+
+  document.getElementById('bios').innerHTML = lengths.filter(function (l) { return B[l[0]]; })
+    .map(function (l, i) {
+      var words = B[l[0]].trim().split(/\s+/).length;
+      return '<div class="biobox">' +
+        '<div class="biobox-head">' +
+          '<div><span class="biobox-label">' + l[1] + '</span> ' +
+          '<span class="biobox-count">' + words + ' words</span>' +
+          '<p style="font-size:.8rem;color:var(--muted);margin-top:2px">' + l[2] + '</p></div>' +
+          '<button class="copy-btn" data-i="' + i + '">Copy</button>' +
+        '</div>' +
+        '<p class="text" id="biotext' + i + '">' + esc(B[l[0]]) + '</p>' +
+      '</div>';
+    }).join('');
+
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var txt = document.getElementById('biotext' + btn.getAttribute('data-i')).textContent;
+      var done = function () {
+        btn.textContent = 'Copied'; btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
+      };
+      if (navigator.clipboard) { navigator.clipboard.writeText(txt).then(done).catch(done); }
+      else { done(); }
+    });
+  });
+});
+</script>
+</body>
+</html>
