@@ -214,18 +214,25 @@
       html += '<p class="talk-group">Upcoming</p>' + upcoming.map(talkHTML).join('');
     }
 
-    function block(label, items) {
-      if (!items.length) return '';
+    function block(items) {
+      if (!items.length) return '<p class="empty-col">None yet.</p>';
       var g = groupByYear(items);
-      return '<p class="talk-group">' + label + '</p>' + g.years.map(function (y) {
+      return g.years.map(function (y) {
         return '<p class="year">' + esc(y) + '</p>' + g.map[y].map(talkHTML).join('');
       }).join('');
     }
 
-    html += block('Conference presentations',
-                  past.filter(function (t) { return t.kind === 'conference'; }));
-    html += block('Invited talks &amp; seminars',
-                  past.filter(function (t) { return t.kind !== 'conference'; }));
+    var conf = past.filter(function (t) { return t.kind === 'conference'; });
+    var inv  = past.filter(function (t) { return t.kind !== 'conference'; });
+
+    html += '<div class="talk-cols">' +
+              '<div class="talk-col">' +
+                '<p class="talk-group">Conference presentations</p>' + block(conf) +
+              '</div>' +
+              '<div class="talk-col">' +
+                '<p class="talk-group">Invited talks &amp; seminars</p>' + block(inv) +
+              '</div>' +
+            '</div>';
     target.innerHTML = html;
   }
 

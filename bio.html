@@ -146,20 +146,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }).join('');
 
   /* the three bios */
-  var lengths = [
-    ['short', 'Short', 'One or two sentences — for a programme listing or a slide'],
-    ['medium', 'Medium', 'A paragraph — for a session description or newsletter'],
-    ['long', 'Long', 'Full introduction — for a keynote intro or press release']
-  ];
+  var lengths = [['long', 'Biography', '']];
 
   document.getElementById('bios').innerHTML = lengths.filter(function (l) { return B[l[0]]; })
     .map(function (l, i) {
-      var words = B[l[0]].trim().split(/\s+/).length;
+
       return '<div class="biobox">' +
         '<div class="biobox-head">' +
-          '<div><span class="biobox-label">' + l[1] + '</span> ' +
-          '<span class="biobox-count">' + words + ' words</span>' +
-          '<p style="font-size:.8rem;color:var(--muted);margin-top:2px">' + l[2] + '</p></div>' +
+          '<div><span class="biobox-label">' + l[1] + '</span></div>' +
           '<button class="copy-btn" data-i="' + i + '">Copy</button>' +
         '</div>' +
         '<p class="text" id="biotext' + i + '">' + esc(B[l[0]]) + '</p>' +

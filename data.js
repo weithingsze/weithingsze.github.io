@@ -28,9 +28,7 @@ window.SITE = {
   bio: {
     headshot: "headshot.jpg",
     pronunciation: "",
-    short: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, appointed jointly in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, where she researches digital health and lifestyle interventions for people living with type 2 diabetes.",
-    medium: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. A pharmacist by training, she researches digital health and lifestyle interventions for people living with type 2 diabetes, with a particular focus on AI-supported tools and the behavior change theory that underpins them. She teaches digital health and public health informatics in the Master of Public Health programme, and received the Academic Paper Award from the Japan Association of Medical Informatics in 2024.",
-    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a pharmacist and practised with the Ministry of Health. She is a Chevening Scholar, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a pharmacist and practised with the Ministry of Health, Malaysia. She was a Chevening Scholar, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
   },
 
   /* ── EDUCATION ── */
@@ -236,7 +234,7 @@ window.SITE = {
   /* ── TEACHING: courses you convene ── */
   courses: [
     {
-      name: "Digital Health & Public Health Informatics",
+      name: "Public Health Informatics",
       programme: "Master of Public Health (MPH)",
       institution: "School of Public Health, Graduate School of Medicine, The University of Tokyo",
       years: "2026–present",
@@ -382,11 +380,11 @@ window.SITE = {
   /* ── AWARDS & HONOURS ── */
   awards: [
     {
-      name: "KAKENHI Grant-in-Aid for Research Activity Start-up",
+      name: "KAKENHI Grant-in-Aid for Research Activity Start-up — Principal Investigator",
       body_org: "Japan Society for the Promotion of Science (JSPS)",
       year: 2026,
       place: "Japan",
-      blurb: "JSPS funding for researchers beginning an independent research programme.",
+      blurb: "Competitive research funding supporting work on identifying individuals at risk of suboptimal response to AI-based dietary support interventions, and developing a personalized framework to guide intervention adaptation.",
       tags: ["Research funding"],
     },
     {
@@ -405,7 +403,6 @@ window.SITE = {
       body_org: "Japanese Government (Monbukagakusho)",
       year: 2022,
       place: "Japan",
-      blurb: "Japan's national government scholarship for international students and researchers, funding doctoral study.",
       tags: ["Doctoral funding"],
     },
     {
@@ -421,7 +418,6 @@ window.SITE = {
       body_org: "UK Foreign, Commonwealth and Development Office",
       year: 2016,
       place: "United Kingdom",
-      blurb: "The UK government's flagship scholarship programme, funding a master's degree at University College London. Roughly one in a hundred applicants is selected, joining a global network of more than 50,000 alumni across 160+ countries.",
       tags: ["International"],
     },
     {
@@ -429,6 +425,7 @@ window.SITE = {
       body_org: "Malaysia Pharmacy Innovation and Creativity Convention",
       year: 2016,
       place: "Malaysia",
+      blurb: "For a dilution tag innovation.",
     },
   ],
 
@@ -447,6 +444,7 @@ window.SITE = {
     {
       name: "Chi Alpha Japan",
       location: "Nakano, Tokyo",
+      link: "https://www.chialphajapan.net/",
       tags: ["Tokyo"],
     },
     {

@@ -131,6 +131,19 @@ section:first-of-type { border-top: none; }
   margin: 56px 0 4px; padding-bottom: 10px; border-bottom: 2px solid var(--ink);
 }
 .talk-group:first-child { margin-top: 12px; }
+
+/* Conference vs invited, side by side */
+.talk-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 52px; align-items: start; }
+.talk-col .talk-group { margin-top: 48px; }
+.talk-col .year { margin-top: 32px; }
+.talk-col .entry { grid-template-columns: 62px 1fr; gap: 18px; padding: 20px 0; }
+.talk-col .entry h3 { font-size: 1.06rem; }
+.talk-col .entry .venue { font-size: 0.86rem; }
+.empty-col { font-size: 0.9rem; color: var(--muted); font-style: italic; padding: 20px 0; }
+@media (max-width: 900px) {
+  .talk-cols { grid-template-columns: 1fr; gap: 0; }
+  .talk-col .entry { grid-template-columns: 78px 1fr; gap: 28px; }
+}
 .entry.is-upcoming .when .mo { color: var(--accent); }
 .entry.is-upcoming h3 { color: var(--ink); }
 
