@@ -28,7 +28,7 @@ window.SITE = {
   bio: {
     headshot: "headshot.jpg",
     pronunciation: "",
-    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a pharmacist and practised with the Ministry of Health, Malaysia. She was a Chevening Scholar, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+    long: "Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a clinical pharmacist and practised in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic, and Medication Awareness community events. She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
   },
 
   /* ── EDUCATION ── */
@@ -269,26 +269,6 @@ window.SITE = {
   /* ── TALKS ── kind: conference | invited | seminar ── */
   talks: [
     {
-      title: "Iterative development of FiberMore, a generative-AI-enabled dietary intervention for type 2 diabetes",
-      event: "ATTD-ASIA 2026 — 3rd Asian Conference on Innovative Therapies for Diabetes Management",
-      city: "Kyoto, Japan",
-      month: "Dec",
-      year: 2026,
-      kind: "conference",
-      intl: true,
-      upcoming: true,
-    },
-    {
-      title: "Baseline characteristics associated with response to a generative-AI-enabled dietary fiber intervention in type 2 diabetes",
-      event: "ATTD-ASIA 2026 — 3rd Asian Conference on Innovative Therapies for Diabetes Management",
-      city: "Kyoto, Japan",
-      month: "Dec",
-      year: 2026,
-      kind: "conference",
-      intl: true,
-      upcoming: true,
-    },
-    {
       title: "A candidate baseline responder profile for a generative-AI-enabled dietary fiber intervention in type 2 diabetes",
       event: "Diabetes Technology Meeting (DTM) 2026",
       city: "Washington, DC, USA",
@@ -392,7 +372,6 @@ window.SITE = {
       body_org: "Japan Association of Medical Informatics (JAMI)",
       year: 2024,
       place: "Japan",
-      blurb: "JAMI selects a single paper each year for its contribution to the field. Japan's only medical informatics society affiliated with IMIA, it presents the award at the Joint Conference on Medical Informatics.",
       paper: "StepAdd: A personalized mHealth intervention based on social cognitive theory to increase physical activity among type 2 diabetes patients",
       paperVenue: "Journal of Biomedical Informatics, 2023",
       paperDoi: "10.1016/j.jbi.2023.104481",
@@ -414,6 +393,14 @@ window.SITE = {
       tags: ["National"],
     },
     {
+      name: "Internal Research Grant",
+      body_org: "SEGi University",
+      year: 2019,
+      place: "Malaysia",
+      paper: "Investigating the Feasibility of Medicines Use Review Service in Private Health Institutions",
+      tags: ["Principal investigator"],
+    },
+    {
       name: "Chevening Scholarship",
       body_org: "UK Foreign, Commonwealth and Development Office",
       year: 2016,
@@ -425,19 +412,19 @@ window.SITE = {
       body_org: "Malaysia Pharmacy Innovation and Creativity Convention",
       year: 2016,
       place: "Malaysia",
-      blurb: "For a dilution tag innovation.",
+      paper: "Administration and Dilution Quick Referral Tag for Intravenous Medications",
     },
   ],
 
   /* ── COMMUNITY & SERVICE ── */
-  communityIntro: "I value community as much as I value my professional life, and I enjoy connecting people. Feel free to reach out if you are interested in attending any of these events while you are in Tokyo.",
+  communityIntro: "I value community as much as I value my professional life, and I enjoy connecting people. Feel free to reach out if you are interested in getting connected through any of these community events while you are in Tokyo.",
 
   community: [
     {
       name: "ICA Tokyo",
       role: "Guest Experience Team · Reach Café",
       location: "Bunkyo-ku, Tokyo",
-      blurb: "I volunteer on the Guest Experience Team and at Reach Café, both as ways of connecting with the wider community.",
+      blurb: "I volunteer on the Guest Experience Team and at Reach Café.",
       link: "https://icatokyo.com/",
       tags: ["Tokyo", "International community"],
     },

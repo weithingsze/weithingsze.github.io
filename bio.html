@@ -70,10 +70,11 @@
     <a class="wordmark" href="index.html">Wei Thing Sze</a>
     <nav aria-label="Main">
       <a href="index.html">Home</a>
+      <a href="bio.html" aria-current="page">Bio</a>
       <a href="publications.html">Publications</a>
       <a href="talks.html">Talks</a>
       <a href="teaching.html">Teaching</a>
-      <a href="awards.html">Awards</a>
+      <a href="awards.html">Milestones</a>
       <span class="nav-sep" aria-hidden="true"></span>
       <a href="community.html">Community</a>
       <a href="cities.html">Cities</a>
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
           '<div><span class="biobox-label">' + l[1] + '</span></div>' +
           '<button class="copy-btn" data-i="' + i + '">Copy</button>' +
         '</div>' +
-        '<p class="text" id="biotext' + i + '">' + esc(B[l[0]]) + '</p>' +
+        '<p class="text" id="biotext' + i + '">' + B[l[0]] + '</p>' +
       '</div>';
     }).join('');
 
