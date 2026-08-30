@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The editor is a private tool and should not be uploaded at all;
+# this is belt-and-braces in case it ever is.
+Disallow: /editor.html
+
+Sitemap: https://weithingsze.github.io/sitemap.xml

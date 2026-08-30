@@ -338,6 +338,74 @@ section:first-of-type { border-top: none; }
 footer { border-top: 1px solid var(--hairline); padding: 52px 0 68px; }
 footer .small { font-size: 0.8rem; color: var(--muted); margin-top: 34px; }
 
+/* ── Mobile ───────────────────────────────────────────────────────────── */
+html, body { overflow-x: hidden; }
+img, svg { max-width: 100%; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; line-height: 1.68; }
+  .wrap { padding: 0 20px; }
+
+  /* Nav becomes a single swipeable strip rather than wrapping into a block */
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px 0 0; }
+  nav {
+    flex-wrap: nowrap; overflow-x: auto; width: 100%;
+    margin: 0 -20px; padding: 4px 20px 14px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    gap: 18px;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { white-space: nowrap; padding: 4px 0; font-size: 0.8rem; }
+  .nav-sep { display: none; }
+  .wordmark { font-size: 1.18rem; }
+
+  /* Headings and rhythm */
+  h1 { font-size: clamp(1.85rem, 8vw, 2.3rem); letter-spacing: -0.018em; }
+  .page-head { padding: 40px 0 6px; }
+  section { padding: 44px 0; }
+  .section-title { font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 20px; }
+
+  /* Hero */
+  .hero { padding: 36px 0 8px !important; gap: 34px !important; }
+  .hero h1 { font-size: clamp(2rem, 8.5vw, 2.5rem); }
+  .hero p.lede { font-size: 1rem; }
+  .portrait { width: 86px; height: 86px; margin-bottom: 20px; }
+
+  /* Counters and cards */
+  .counters { gap: 26px; margin-top: 24px; }
+  .counter .n { font-size: 1.9rem; }
+  .card { padding: 20px; }
+  .areas .card { min-height: 0; padding: 20px; }
+  .area h3 { font-size: 1.1rem; }
+
+  /* Entries stay readable rather than squeezing into two columns */
+  .pub { padding: 20px 0; }
+  .pub .title, .entry h3, .honour h3 { font-size: 1.08rem; }
+  .honour h3 { font-size: 1.2rem; }
+  .awarded-for { padding: 12px 14px; }
+
+  /* Comfortable tap targets */
+  .btn { padding: 13px 22px; }
+  .copy-btn { padding: 9px 16px; }
+  .msg-box button { width: 100%; padding: 14px 20px; }
+  .facts-list li, .svc-item, .lang-item, .edu-item { padding: 13px 0; }
+  .facts-list .k { min-width: 0; }
+  .facts-list li { flex-direction: column; gap: 3px; }
+
+  /* Map: swipeable, with room to breathe */
+  .map-card { margin: 20px -20px 8px; padding: 10px 0; border-left: none; border-right: none; }
+  svg.map { min-width: 860px; }
+  .map-hint { padding: 0 20px; }
+
+  footer { padding: 40px 0 56px; }
+}
+
+@media (max-width: 420px) {
+  .wrap { padding: 0 16px; }
+  nav { margin: 0 -16px; padding: 4px 16px 14px; }
+  .map-card { margin-left: -16px; margin-right: -16px; }
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .wrap { padding: 0 24px; }
