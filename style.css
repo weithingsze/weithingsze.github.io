@@ -42,8 +42,8 @@ body {
   background: var(--paper);
   color: var(--body);
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16.5px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.72;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,7 +92,7 @@ header.scrolled { border-bottom-color: var(--rule); box-shadow: 0 1px 16px rgba(
 nav { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; }
 nav a {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.815rem; font-weight: 500;
+  font-size: 0.84rem; font-weight: 500;
   letter-spacing: 0.055em; text-transform: uppercase;
   color: var(--muted);
 }
@@ -162,7 +162,7 @@ section:first-of-type { border-top: none; }
 /* ── Chips ────────────────────────────────────────────────────────────── */
 .chip, .tag {
   display: inline-block; font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.63rem; letter-spacing: 0.09em; text-transform: uppercase;
+  font-size: 0.71rem; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted); background: transparent;
   border: 1px solid var(--hairline); border-radius: 2px; padding: 3px 9px;
 }
@@ -178,7 +178,7 @@ section:first-of-type { border-top: none; }
   line-height: 1; color: var(--ink); letter-spacing: -0.02em;
 }
 .counter .lbl {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.63rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.71rem;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
   margin-top: 7px;
 }
@@ -206,9 +206,9 @@ section:first-of-type { border-top: none; }
 }
 .pub .title a { color: var(--ink); }
 .pub .title a:hover { color: var(--accent); text-decoration: none; }
-.pub .authors { font-size: 0.875rem; color: var(--body); margin-bottom: 3px; }
+.pub .authors { font-size: 0.895rem; color: var(--body); margin-bottom: 3px; }
 .pub .authors strong { font-weight: 600; color: var(--ink); }
-.pub .venue { font-size: 0.85rem; color: var(--muted); }
+.pub .venue { font-size: 0.875rem; color: var(--muted); }
 .pub .venue em { font-style: italic; }
 
 /* ── Dated entries (talks, lectures) ──────────────────────────────────── */
@@ -218,7 +218,7 @@ section:first-of-type { border-top: none; }
 }
 .entry:last-of-type { border-bottom: none; }
 .entry .when {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem;
   letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted);
   padding-top: 6px; line-height: 1.6;
 }
@@ -254,7 +254,7 @@ section:first-of-type { border-top: none; }
   max-width: 40em;
 }
 .awarded-lbl {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
 }
 .awarded-title {
@@ -302,7 +302,7 @@ section:first-of-type { border-top: none; }
 .edu-item { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
 .edu-item:last-child { border-bottom: none; }
 .edu-years {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem;
   color: var(--muted); letter-spacing: 0.08em;
 }
 .edu-item strong {
@@ -318,7 +318,7 @@ section:first-of-type { border-top: none; }
 .lang-item:last-child { border-bottom: none; }
 .lang-name { font-family: 'Newsreader', serif; font-size: 1.02rem; font-weight: 500; color: var(--ink); }
 .lang-level {
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.71rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: right;
 }
 
@@ -343,19 +343,19 @@ html, body { overflow-x: hidden; }
 img, svg { max-width: 100%; }
 
 @media (max-width: 700px) {
-  body { font-size: 16px; line-height: 1.68; }
-  .wrap { padding: 0 20px; }
+  body { font-size: 16.5px; line-height: 1.7; }
+  .wrap { padding: 0 26px; }
 
   /* Nav becomes a single swipeable strip rather than wrapping into a block */
   .header-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px 0 0; }
   nav {
     flex-wrap: nowrap; overflow-x: auto; width: 100%;
-    margin: 0 -20px; padding: 4px 20px 14px;
+    margin: 0 -26px; padding: 4px 26px 14px;
     -webkit-overflow-scrolling: touch; scrollbar-width: none;
     gap: 18px;
   }
   nav::-webkit-scrollbar { display: none; }
-  nav a { white-space: nowrap; padding: 4px 0; font-size: 0.8rem; }
+  nav a { white-space: nowrap; padding: 5px 0; font-size: 0.85rem; }
   .nav-sep { display: none; }
   .wordmark { font-size: 1.18rem; }
 
@@ -393,17 +393,24 @@ img, svg { max-width: 100%; }
   .facts-list li { flex-direction: column; gap: 3px; }
 
   /* Map: swipeable, with room to breathe */
-  .map-card { margin: 20px -20px 8px; padding: 10px 0; border-left: none; border-right: none; }
+  .map-card { margin: 20px -26px 8px; padding: 10px 0; border-left: none; border-right: none; }
   svg.map { min-width: 860px; }
-  .map-hint { padding: 0 20px; }
+  .map-hint { padding: 0 26px; }
+
+  .chip, .tag { font-size: 0.73rem; }
+  .counter .lbl { font-size: 0.73rem; }
+  .lang-level { font-size: 0.73rem; }
+  .map-hint { font-size: 0.8rem; }
+  .msg-note { font-size: 0.82rem; }
 
   footer { padding: 40px 0 56px; }
 }
 
 @media (max-width: 420px) {
-  .wrap { padding: 0 16px; }
-  nav { margin: 0 -16px; padding: 4px 16px 14px; }
-  .map-card { margin-left: -16px; margin-right: -16px; }
+  .wrap { padding: 0 22px; }
+  nav { margin: 0 -22px; padding: 4px 22px 14px; }
+  .map-card { margin-left: -22px; margin-right: -22px; }
+  .map-hint { padding: 0 22px; }
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────── */
