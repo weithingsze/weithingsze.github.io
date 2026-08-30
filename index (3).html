@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Wei Thing Sze, PhD — Digital Health &amp; Lifestyle Intervention Research</title>
+<meta name="description" content="Wei Thing Sze is an Assistant Professor at The University of Tokyo, in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, researching digital health and lifestyle interventions and behavior change.">
+<style>
+  .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 68px;
+          padding-top: 88px; padding-bottom: 76px; align-items: start; }
+  .portrait { width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+              display: block; margin-bottom: 26px; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: .68rem;
+             letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+             margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(2.3rem, 5.2vw, 3.5rem); margin-bottom: 24px;
+             letter-spacing: -.028em; font-weight: 400; }
+  .hero p.lede { color: var(--body); font-size: 1.02rem; line-height: 1.75;
+                 max-width: 34em; margin-bottom: 18px; }
+  .hero p.lede:last-of-type { margin-bottom: 32px; }
+
+  /* At a glance — quiet, tabular, hairline-ruled */
+  .facts { border-top: 2px solid var(--ink); padding-top: 16px; }
+  .facts h2 { font-family: 'IBM Plex Mono', monospace; font-weight: 400;
+              font-size: .66rem; letter-spacing: .17em; text-transform: uppercase;
+              color: var(--muted); margin-bottom: 16px; }
+  .facts .frow { display: flex; justify-content: space-between; gap: 18px;
+                 padding: 11px 0; border-bottom: 1px solid var(--hairline);
+                 font-size: .85rem; }
+  .facts .frow:last-of-type { border-bottom: none; }
+  .facts dt { color: var(--muted); font-weight: 400; white-space: nowrap; }
+  .facts dd { color: var(--ink); text-align: right; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px;
+                  margin-top: 10px; align-items: start; }
+  .msg-box label { display: block; font-family: 'IBM Plex Mono', monospace;
+                   font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+                   color: var(--muted); margin-bottom: 6px; }
+  .msg-box input, .msg-box textarea {
+    width: 100%; font-family: 'IBM Plex Sans', sans-serif; font-size: .93rem;
+    color: var(--ink); background: var(--paper); border: 1px solid var(--hairline);
+    border-radius: 2px; padding: 10px 12px; margin-bottom: 18px; resize: vertical; }
+  .msg-box input:focus, .msg-box textarea:focus {
+    outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(29,81,64,.08); }
+  .msg-box button {
+    font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: .9rem;
+    color: #fff; background: var(--accent); border: 1px solid var(--accent);
+    border-radius: 2px; padding: 11px 22px; cursor: pointer; transition: all .16s ease; }
+  .msg-box button:hover { background: var(--ink); border-color: var(--ink); }
+  .msg-note { font-size: .76rem; color: var(--muted); margin-top: 12px; }
+  .direct-lbl { font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+                letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+                margin-bottom: 10px; }
+  .contact-line { font-family: 'Newsreader', serif; font-size: 1.5rem; font-weight: 400;
+                  color: var(--ink); letter-spacing: -.015em; margin-bottom: 20px; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 48px; padding-top: 56px; padding-bottom: 56px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+  }
+</style>
+
+<!-- Social preview: how this page looks when shared on LinkedIn, X, Slack, WhatsApp.
+     IMPORTANT: replace weithingsze below with your real GitHub username. -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Wei Thing Sze, PhD">
+<meta property="og:title" content="Wei Thing Sze, PhD — Digital Health &amp; Lifestyle Intervention Research">
+<meta property="og:description" content="Wei Thing Sze is an Assistant Professor at The University of Tokyo, in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, researching digital health and lifestyle interventions and behavior change.">
+<meta property="og:url" content="https://weithingsze.github.io/">
+<meta property="og:image" content="https://weithingsze.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wei Thing Sze, PhD — Assistant Professor, Interfaculty Initiative in Information Studies and Graduate School of Medicine, The University of Tokyo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wei Thing Sze, PhD — Digital Health &amp; Lifestyle Intervention Research">
+<meta name="twitter:description" content="Wei Thing Sze is an Assistant Professor at The University of Tokyo, in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, researching digital health and lifestyle interventions and behavior change.">
+<meta name="twitter:image" content="https://weithingsze.github.io/preview.png">
+<link rel="canonical" href="https://weithingsze.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wei Thing Sze",
+  "givenName": "Wei Thing",
+  "familyName": "Sze",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Assistant Professor",
+  "url": "https://weithingsze.github.io",
+  "image": "https://weithingsze.github.io/headshot.jpg",
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "The University of Tokyo",
+    "url": "https://www.u-tokyo.ac.jp/"
+  },
+  "affiliation": [
+    { "@type": "Organization",
+      "name": "Interfaculty Initiative in Information Studies, The University of Tokyo",
+      "url": "https://www.iii.u-tokyo.ac.jp/" },
+    { "@type": "Organization",
+      "name": "Department of Health and Behavioral Informatics & Therapeutics (HABIT), Graduate School of Medicine, The University of Tokyo",
+      "url": "https://waki-lab.jp/" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The University of Tokyo" },
+    { "@type": "CollegeOrUniversity", "name": "University College London" },
+    { "@type": "CollegeOrUniversity", "name": "International Medical University, Malaysia" }
+  ],
+  "knowsAbout": [
+    "Digital health", "Lifestyle interventions", "Health behavior change",
+    "Artificial intelligence in health", "Personalization in health interventions",
+    "User experience with digital health interventions",
+    "Evaluation and acceptance of AI-based interventions",
+    "Type 2 diabetes", "Clinical pharmacy", "Health informatics"
+  ],
+  "knowsLanguage": ["English", "Mandarin Chinese", "Cantonese", "Malay", "Japanese"],
+  "sameAs": [
+    "https://orcid.org/0000-0003-1054-6886",
+    "https://scholar.google.com/citations?user=NYyczMIAAAAJ&hl=en",
+    "https://www.researchgate.net/profile/Wei-Thing-Sze-3",
+    "https://www.linkedin.com/in/weithingsze/"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": "0000-0003-1054-6886"
+  }
+}
+</script>
+</head>
+<body data-page="index.html">
+
+<header>
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html">Wei Thing Sze</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="bio.html">Bio</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks</a>
+      <a href="teaching.html">Teaching &amp; mentorship</a>
+      <a href="awards.html">Milestones</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="community.html">Community</a>
+      <a href="cities.html">Cities</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="index.html#contact">Reach out</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <img class="portrait" src="headshot.jpg" alt="Portrait of Wei Thing Sze" width="132" height="132">
+      <p class="eyebrow">Assistant Professor &middot; The University of Tokyo</p>
+      <h1>Wei Thing Sze, <em>PhD</em></h1>
+      <p class="lede">My professional journey began in pharmacy, but over time my interests expanded
+        into digital health, behavioral science, and artificial intelligence. Today, my work lies at
+        the intersection of health, behavior change, artificial intelligence, digital health, and
+        user experience. I am interested in developing and evaluating digital approaches to support
+        sustainable health-related behavior change. Despite this transition, I remain a pharmacist at
+        heart, driven by the same goal of empowering people to live healthier lives.</p>
+      <p class="lede">My work has taken me across Malaysia, the United Kingdom, and now Japan, which
+        has deepened my appreciation for diverse lived experiences, cultures, and perspectives that
+        inspire me both personally and professionally.</p>
+      <p class="lede">I enjoy working across disciplines and learning from different fields to
+        approach health challenges from different angles. I'm always happy to connect — please feel
+        free to reach out if you're interested in a chat or potential collaboration.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="#contact">Reach out</a>
+        <a class="btn ghost" href="publications.html">Publications</a>
+      </div>
+    </div>
+
+    <aside class="facts" aria-label="Quick facts">
+      <h2>At a glance</h2>
+      <dl>
+        <div class="frow"><dt>Position</dt><dd>Assistant Professor</dd></div>
+        <div class="frow"><dt>Current appointment<br>and affiliation</dt><dd>Interfaculty Initiative<br>in Information Studies,<br>The University of Tokyo<br><span style="display:inline-block;margin-top:9px">Department of Health and<br>Behavioral Informatics &amp;<br>Therapeutics (HABIT),<br>Graduate School of Medicine,<br>The University of Tokyo</span></dd></div>
+        <div class="frow"><dt>Focus</dt><dd>Digital health &middot; Behavior change<br>AI &middot; User experience</dd></div>
+        <div class="frow"><dt>Teaching</dt><dd>Public Health Informatics,<br>Master of Public Health (MPH),<br>The University of Tokyo</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  <section id="research">
+    <div class="wrap">
+      <p class="section-title">Research areas</p>
+      <div class="areas">
+        <div class="card area"><h3>Digital health &amp; lifestyle interventions</h3></div>
+        <div class="card area"><h3>Health behavior change</h3></div>
+        <div class="card area"><h3>Artificial intelligence in health</h3></div>
+        <div class="card area"><h3>Personalization in health interventions</h3></div>
+        <div class="card area"><h3>User experience with digital health interventions</h3></div>
+        <div class="card area"><h3>Evaluation and acceptance of AI-based interventions</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap narrow" style="margin:0 auto 0 0;max-width:900px">
+      <p class="section-title">Selected publications</p>
+      <div id="pub-recent"></div>
+      <p style="margin-top:20px;font-size:.9rem"><a href="publications.html">View all publications &rarr;</a></p>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="wrap">
+      <p class="section-title">Teaching</p>
+      <p style="font-family:Newsreader,serif;font-weight:600;font-size:1.2rem">Public Health Informatics — Master of Public Health program</p>
+      <p style="margin-top:8px;color:var(--muted);max-width:44em">School of Public Health, Graduate School of Medicine, The University of Tokyo. Lectures on digital health interventions, evaluation methods, and the responsible use of AI in public health, alongside mentoring students in practicals and workshops on digital health innovation.</p>
+      <p style="margin-top:16px;font-size:.9rem"><a href="teaching.html">Courses and lectures delivered &rarr;</a></p>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap two-col">
+      <div>
+        <p class="section-title">Education</p>
+        <ul class="edu-list" id="edu-list"></ul>
+      </div>
+      <div>
+        <p class="section-title">Languages</p>
+        <ul class="lang-list" id="lang-list"></ul>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:44px">
+      <p class="section-title">Additional training</p>
+      <ul class="svc-list" id="training-list"></ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="section-title">Reach out</p>
+    <p class="contact-line">Always open for ideas, collaborations, conversations.</p>
+
+    <div class="contact-grid">
+      <div class="card msg-box">
+        <label for="f-name">Your name</label>
+        <input id="f-name" type="text" autocomplete="name">
+
+        <label for="f-email">Your email</label>
+        <input id="f-email" type="email" autocomplete="email">
+
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" rows="5"></textarea>
+
+        <button id="f-send" type="button">Send</button>
+        <p class="msg-note" id="f-status"></p>
+      </div>
+
+      <div class="direct">
+        <p class="direct-lbl">Or reach me directly</p>
+        <p><a data-email href="#">loading…</a></p>
+        <ul class="link-list">
+          <li><a href="bio.html">Bio</a></li>
+          <li><a data-link="linkedin" href="#">LinkedIn</a></li>
+          <li><a data-link="scholar" href="#">Google Scholar</a></li>
+          <li><a data-link="researchgate" href="#">ResearchGate</a></li>
+          <li><a data-link="orcid" href="#">ORCID</a></li>
+          <li><a data-link="github" href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="small">&copy; 2026 Wei Thing Sze &middot; Built with plain HTML, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="render.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById('f-send');
+  var status = document.getElementById('f-status');
+  var say = function (t, ok) {
+    status.innerHTML = t;
+    status.style.color = ok ? 'var(--accent)' : 'var(--muted)';
+  };
+
+  // Sending only works over http(s). Opened straight from disk, the browser
+  // blocks the request, so say so plainly rather than showing a vague error.
+  var isLocalFile = location.protocol === 'file:';
+
+  btn.addEventListener('click', function () {
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var msg = document.getElementById('f-msg').value.trim();
+
+    if (!msg) { document.getElementById('f-msg').focus(); return; }
+    if (!email) { document.getElementById('f-email').focus(); say('Please add your email so I can reply.'); return; }
+
+    if (isLocalFile) {
+      say('Sending only works on the published site, not when the page is opened from a file.');
+      return;
+    }
+
+    var to = (window.SITE && window.SITE.email) || '';
+    btn.disabled = true;
+    say('Sending…');
+
+    fetch('https://formsubmit.co/ajax/' + to, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: name || '(not given)',
+        email: email,
+        message: msg,
+        _subject: 'Message from your website',
+        _template: 'table',
+        _captcha: 'false'
+      })
+    })
+    .then(function (r) { return r.json().catch(function () { return {}; }); })
+    .then(function (d) {
+      btn.disabled = false;
+      if (d && (d.success === 'true' || d.success === true)) {
+        say('Thank you — your message has been sent.', true);
+        document.getElementById('f-name').value = '';
+        document.getElementById('f-email').value = '';
+        document.getElementById('f-msg').value = '';
+      } else {
+        // Show whatever the service reported — usually "please activate"
+        // on the very first submission.
+        say((d && d.message ? d.message : 'Could not send.') +
+            ' You can also email me directly at <a href="mailto:' + to + '">' + to + '</a>.');
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      say('Could not reach the mail service. Please email me directly at ' +
+          '<a href="mailto:' + to + '">' + to + '</a>.');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
