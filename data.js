@@ -30,7 +30,12 @@ window.SITE = {
   bio: {
     headshot: "headshot.jpg",
     pronunciation: "",
-    long: "Originally born in Kuching, Malaysia, Wei Thing Sze is an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine. She leads clinical studies on digital health and lifestyle interventions for people living with type 2 diabetes, spanning diet, physical activity, and behavior change, and teaches digital health and public health informatics in the Master of Public Health programme. She works across disciplines and stakeholders, developing and evaluating digital health interventions together with clinicians, healthcare practitioners, patients, statisticians, and software developers. Her interests centre on patient-centred healthcare and user-centred design in digital health, and she works across a range of qualitative and quantitative methods. She trained as a clinical pharmacist and practised in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic for type 2 diabetes, and Medication Awareness community events. She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+    long: [
+      "Originally born in Kuching, Malaysia, Wei Thing Sze is currently an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine.",
+      "She leads clinical studies on digital health and behavior change lifestyle interventions for people living with type 2 diabetes, and teaches digital health and public health informatics in the Master of Public Health program. She works across disciplines and stakeholders, developing and evaluating digital health interventions together with clinicians, patients, statisticians, and software developers. Her interests center on patient-centered healthcare and user-centered design in digital health, and she works across a range of qualitative and quantitative methods.",
+      "She trained as a clinical pharmacist and practiced in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic for type 2 diabetes, and Medication Awareness community events.",
+      "She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+    ],
   },
 
   /* ── EDUCATION ── */
@@ -76,11 +81,11 @@ window.SITE = {
     },
     {
       title: "Implementation science",
-      detail: "Implementation Science Bootcamp — Yale University and Universiti Malaya.",
+      detail: "Implementation Science Bootcamp, organized by Yale University and UM.",
     },
     {
       title: "Qualitative analysis",
-      detail: "Gathering and Analysing Qualitative Data — Institute for Social Science Research, The University of Queensland.",
+      detail: "Gathering and Analysing Qualitative Data, organized by the Institute for Social Science Research, The University of Queensland (UQ).",
     },
   ],
 
@@ -451,7 +456,10 @@ window.SITE = {
      Add one by clicking the map in editor.html. */
   cities: [
     /* ── Asia ── */
-    { name: "Tokyo",            country: "Japan",       region: "Asia", lat: 35.68, lng: 139.69, note: "Home since 2022" },
+    { name: "Tokyo",            country: "Japan",       region: "Asia", lat: 35.68, lng: 139.69, note: "Current location — home since 2022", current: true },
+    { name: "Osaka",            country: "Japan",       region: "Asia", lat: 34.69, lng: 135.50 },
+    { name: "Fukuoka",          country: "Japan",       region: "Asia", lat: 33.59, lng: 130.40 },
+    { name: "Nagasaki",         country: "Japan",       region: "Asia", lat: 32.75, lng: 129.87 },
     { name: "Seoul",            country: "South Korea", region: "Asia", lat: 37.57, lng: 126.98, note: "Research seminar at Seoul National University" },
     { name: "Busan",            country: "South Korea", region: "Asia", lat: 35.18, lng: 129.08 },
     { name: "Jeju",             country: "South Korea", region: "Asia", lat: 33.50, lng: 126.53 },

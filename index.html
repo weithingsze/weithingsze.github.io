@@ -214,7 +214,7 @@
   <section id="teaching">
     <div class="wrap">
       <p class="section-title">Teaching</p>
-      <p style="font-family:Newsreader,serif;font-weight:600;font-size:1.2rem">Public Health Informatics — Master of Public Health programme</p>
+      <p style="font-family:Newsreader,serif;font-weight:600;font-size:1.2rem">Public Health Informatics — Master of Public Health program</p>
       <p style="margin-top:8px;color:var(--muted);max-width:44em">School of Public Health, Graduate School of Medicine, The University of Tokyo. Lectures on digital health interventions, evaluation methods, and the responsible use of AI in public health, alongside mentoring students in practicals and workshops on digital health innovation.</p>
       <p style="margin-top:16px;font-size:.9rem"><a href="teaching.html">Courses and lectures delivered &rarr;</a></p>
     </div>
@@ -285,9 +285,13 @@
   var btn = document.getElementById('f-send');
   var status = document.getElementById('f-status');
   var say = function (t, ok) {
-    status.textContent = t;
+    status.innerHTML = t;
     status.style.color = ok ? 'var(--accent)' : 'var(--muted)';
   };
+
+  // Sending only works over http(s). Opened straight from disk, the browser
+  // blocks the request, so say so plainly rather than showing a vague error.
+  var isLocalFile = location.protocol === 'file:';
 
   btn.addEventListener('click', function () {
     var name = document.getElementById('f-name').value.trim();
@@ -297,10 +301,16 @@
     if (!msg) { document.getElementById('f-msg').focus(); return; }
     if (!email) { document.getElementById('f-email').focus(); say('Please add your email so I can reply.'); return; }
 
+    if (isLocalFile) {
+      say('Sending only works on the published site, not when the page is opened from a file.');
+      return;
+    }
+
+    var to = (window.SITE && window.SITE.email) || '';
     btn.disabled = true;
     say('Sending…');
 
-    fetch('https://formsubmit.co/ajax/' + ((window.SITE && window.SITE.email) || ''), {
+    fetch('https://formsubmit.co/ajax/' + to, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
@@ -312,21 +322,25 @@
         _captcha: 'false'
       })
     })
-    .then(function (r) { return r.json(); })
+    .then(function (r) { return r.json().catch(function () { return {}; }); })
     .then(function (d) {
+      btn.disabled = false;
       if (d && (d.success === 'true' || d.success === true)) {
         say('Thank you — your message has been sent.', true);
         document.getElementById('f-name').value = '';
         document.getElementById('f-email').value = '';
         document.getElementById('f-msg').value = '';
       } else {
-        say('Something went wrong. Please email me directly instead.');
+        // Show whatever the service reported — usually "please activate"
+        // on the very first submission.
+        say((d && d.message ? d.message : 'Could not send.') +
+            ' You can also email me directly at <a href="mailto:' + to + '">' + to + '</a>.');
       }
-      btn.disabled = false;
     })
     .catch(function () {
-      say('Something went wrong. Please email me directly instead.');
       btn.disabled = false;
+      say('Could not reach the mail service. Please email me directly at ' +
+          '<a href="mailto:' + to + '">' + to + '</a>.');
     });
   });
 })();

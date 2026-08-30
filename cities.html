@@ -16,6 +16,9 @@
   svg.map { display: block; width: 100%; height: auto; min-width: 720px; }
   .land { fill: var(--land); stroke: var(--land-line); stroke-width: 0.45; }
   .city { fill: var(--accent); stroke: var(--paper); stroke-width: 1.1; cursor: pointer; }
+  .city.current { fill: #C0392B; stroke-width: 1.6; }
+  .halo.current { fill: #C0392B; opacity: 0.16; }
+  .lbl.current-lbl { fill: #C0392B; font-weight: 600; }
   .city:hover, .city.active { fill: var(--highlight); }
   .halo { fill: var(--accent); opacity: 0.10; pointer-events: none; }
   .lbl, .lbl-halo {
@@ -111,7 +114,7 @@
       <g id="label-halos"></g>
       <g id="labels"></g>
     </svg>
-    <p class="map-hint">Hover or tap a marker for details</p>
+    <p class="map-hint"><span style="color:#C0392B">&#9679;</span> Current location &nbsp;·&nbsp; hover or tap a marker for details</p>
   </div>
 </main>
 
@@ -192,7 +195,11 @@ document.addEventListener('DOMContentLoaded', function () {
     { dx: 34,  dy: -32,  a: 'start'  }, { dx: -34, dy: -32,  a: 'end' },
     { dx: 34,  dy: 36,   a: 'start'  }, { dx: -34, dy: 36,   a: 'end' },
     { dx: 88,  dy: -8,   a: 'start'  }, { dx: -88, dy: -8,   a: 'end' },
-    { dx: 88,  dy: 14,   a: 'start'  }, { dx: -88, dy: 14,   a: 'end' }
+    { dx: 88,  dy: 14,   a: 'start'  }, { dx: -88, dy: 14,   a: 'end' },
+    { dx: 70,  dy: -26,  a: 'start'  }, { dx: -70, dy: -26,  a: 'end' },
+    { dx: 70,  dy: 32,   a: 'start'  }, { dx: -70, dy: 32,   a: 'end' },
+    { dx: 104, dy: 3.5,  a: 'start'  }, { dx: -104,dy: 3.5,  a: 'end' },
+    { dx: 0,   dy: -46,  a: 'middle' }, { dx: 0,   dy: 49,   a: 'middle' }
   ];
 
   // crowded cities get first pick — they have the fewest options
@@ -209,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   order.forEach(function (o) {
     var c = o.c, x = toX(c.lng), y = toY(c.lat);
-    var w = c.name.length * FS * 0.575 + 2;
+    var w = c.name.length * FS * 0.565 + 2;
 
     for (var k = 0; k < CAND.length; k++) {
       var p = CAND[k];
@@ -242,13 +249,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var halo = document.createElementNS(NS, 'circle');
-    halo.setAttribute('class', 'halo');
-    halo.setAttribute('cx', x); halo.setAttribute('cy', y); halo.setAttribute('r', 7);
+    halo.setAttribute('class', c.current ? 'halo current' : 'halo');
+    halo.setAttribute('cx', x); halo.setAttribute('cy', y);
+    halo.setAttribute('r', c.current ? 10 : 7);
     gDots.appendChild(halo);
 
     var dot = document.createElementNS(NS, 'circle');
-    dot.setAttribute('class', 'city');
-    dot.setAttribute('cx', x); dot.setAttribute('cy', y); dot.setAttribute('r', 3.4);
+    dot.setAttribute('class', c.current ? 'city current' : 'city');
+    dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+    dot.setAttribute('r', c.current ? 4.8 : 3.4);
     dot.setAttribute('tabindex', '0');
     dot.setAttribute('role', 'button');
     dot.setAttribute('aria-label', c.name + ', ' + c.country + (c.note ? '. ' + c.note : ''));
@@ -265,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
       gHalo.appendChild(halo);
 
       txt = document.createElementNS(NS, 'text');
-      txt.setAttribute('class', 'lbl');
+      txt.setAttribute('class', c.current ? 'lbl current-lbl' : 'lbl');
       txt.setAttribute('x', pl.lx); txt.setAttribute('y', pl.ly);
       txt.setAttribute('text-anchor', pl.a);
       txt.textContent = c.name;

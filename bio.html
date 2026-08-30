@@ -18,7 +18,9 @@
                   letter-spacing: .17em; text-transform: uppercase; color: var(--ink); }
   .biobox-count { font-family: 'IBM Plex Mono', monospace; font-size: .64rem;
                   color: var(--muted); letter-spacing: .06em; }
-  .biobox p.text { font-size: .97rem; line-height: 1.75; max-width: 42em; }
+  .biobox .text { max-width: 42em; }
+  .biobox .text p { font-size: .97rem; line-height: 1.75; margin-bottom: 16px; }
+  .biobox .text p:last-child { margin-bottom: 0; }
   .copy-btn { font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
     letter-spacing: .12em; text-transform: uppercase; background: transparent;
     color: var(--muted); border: 1px solid var(--hairline); border-radius: 2px;
@@ -160,19 +162,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('bios').innerHTML = lengths.filter(function (l) { return B[l[0]]; })
     .map(function (l, i) {
-
+      var paras = [].concat(B[l[0]]);
       return '<div class="biobox">' +
         '<div class="biobox-head">' +
           '<div><span class="biobox-label">' + l[1] + '</span></div>' +
           '<button class="copy-btn" data-i="' + i + '">Copy</button>' +
         '</div>' +
-        '<p class="text" id="biotext' + i + '">' + B[l[0]] + '</p>' +
+        '<div class="text" id="biotext' + i + '">' +
+          paras.map(function (p) { return '<p>' + p + '</p>'; }).join('') +
+        '</div>' +
       '</div>';
     }).join('');
 
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var txt = document.getElementById('biotext' + btn.getAttribute('data-i')).textContent;
+      var box = document.getElementById('biotext' + btn.getAttribute('data-i'));
+      var txt = Array.prototype.map.call(box.querySelectorAll('p'), function (p) {
+        return p.textContent.trim();
+      }).join('\n\n') || box.textContent;
       var done = function () {
         btn.textContent = 'Copied'; btn.classList.add('done');
         setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
