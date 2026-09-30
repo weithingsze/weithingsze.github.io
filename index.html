@@ -11,7 +11,7 @@
 <meta name="description" content="Wei Thing Sze is an Assistant Professor at The University of Tokyo, in the Interfaculty Initiative in Information Studies and the Graduate School of Medicine, researching digital health and lifestyle interventions and behavior change.">
 <style>
   .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 68px;
-          padding: 88px 0 76px; align-items: start; }
+          padding-top: 88px; padding-bottom: 76px; align-items: start; }
   .portrait { width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
               display: block; margin-bottom: 26px; }
   .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: .68rem;
@@ -60,7 +60,7 @@
                   color: var(--ink); letter-spacing: -.015em; margin-bottom: 20px; }
 
   @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; gap: 48px; padding: 56px 0; }
+    .hero { grid-template-columns: 1fr; gap: 48px; padding-top: 56px; padding-bottom: 56px; }
     .contact-grid { grid-template-columns: 1fr; gap: 34px; }
   }
 </style>
@@ -231,11 +231,9 @@
         <ul class="lang-list" id="lang-list"></ul>
       </div>
     </div>
-    <div class="wrap" style="padding:0">
-      <div style="margin-top:44px">
-        <p class="section-title">Additional training</p>
-        <ul class="svc-list" id="training-list"></ul>
-      </div>
+    <div class="wrap" style="margin-top:44px">
+      <p class="section-title">Additional training</p>
+      <ul class="svc-list" id="training-list"></ul>
     </div>
   </section>
 </main>

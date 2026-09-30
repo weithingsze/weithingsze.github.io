@@ -253,26 +253,36 @@ window.SITE = {
     },
   ],
 
+  /* ── TEACHING: curriculum and workshops designed ── */
+  curriculum: [
+    {
+      title: "Digital health design workshop",
+      context: "Public Health Informatics Practicum, Master of Public Health (MPH), The University of Tokyo",
+      years: "2026",
+      summary: "Designed and developed the workshop, integrating user-needs assessment, design thinking, concept prototyping, and outcome evaluation planning.",
+    },
+  ],
+
   /* ── TEACHING: individual lectures delivered ── */
   lectures: [
     {
       title: "The Big Picture of Digital Health and Its Impact on Public Health",
-      course: "Digital Health, MPH",
+      course: "Public Health Informatics, MPH",
       year: 2026,
     },
     {
       title: "Medicine, Wearables, Life-Log Data, and UI/UX Design",
-      course: "Digital Health, MPH",
+      course: "Public Health Informatics, MPH",
       year: 2026,
     },
     {
       title: "Foundations of Behavior Change Theory in Digital Health Intervention",
-      course: "Digital Health, MPH",
+      course: "Public Health Informatics, MPH",
       year: 2026,
     },
     {
       title: "Evaluation, Evidence Generation, and Exercise Orientation",
-      course: "Digital Health, MPH",
+      course: "Public Health Informatics, MPH",
       year: 2026,
     },
   ],
@@ -299,7 +309,7 @@ window.SITE = {
     },
     {
       title: "Digital Health Interventions for Type 2 Diabetes: Evidence from the FiberMore and StepAdd Randomized Controlled Trials",
-      event: "DTx (Digital Therapeutics) Seminar, The University of Tokyo",
+      event: "The 2nd Academic Meeting, Digital Therapeutics Society, The University of Tokyo Hospital",
       city: "Tokyo, Japan",
       month: "Jul",
       year: 2026,
@@ -503,7 +513,7 @@ window.SITE = {
     { name: "Newcastle",  country: "UK", region: "Europe", lat: 54.98, lng: -1.61 },
     { name: "York",       country: "UK", region: "Europe", lat: 53.96, lng: -1.08 },
     { name: "Paris",   country: "France", region: "Europe", lat: 48.86, lng: 2.35 },
-    { name: "Gers",    country: "France", region: "Europe", lat: 43.65, lng: 0.59,  note: "Gascony countryside", note: "Cultural exchange working holiday" },
+    { name: "Gers",    country: "France", region: "Europe", lat: 43.65, lng: 0.59,  note: "Cultural exchange working holiday" },
     { name: "Rome",    country: "Italy",  region: "Europe", lat: 41.90, lng: 12.50 },
     { name: "Umbria",  country: "Italy",  region: "Europe", lat: 43.11, lng: 12.39, note: "Cultural exchange working holiday" },
     { name: "Barcelona", country: "Spain", region: "Europe", lat: 41.39, lng: 2.17 },
@@ -514,9 +524,9 @@ window.SITE = {
     { name: "Luxembourg", country: "Luxembourg", region: "Europe", lat: 49.61, lng: 6.13 },
 
     /* ── Americas ── */
-    { name: "New Orleans",   country: "USA", region: "Americas", lat: 29.95, lng: -90.07,  note: "ADA Scientific Sessions 2026", note: "ADA Scientific Sessions 2026" },
+    { name: "New Orleans",   country: "USA", region: "Americas", lat: 29.95, lng: -90.07,  note: "ADA Scientific Sessions 2026" },
     { name: "San Francisco", country: "USA", region: "Americas", lat: 37.77, lng: -122.42, note: "Diabetes Technology Meeting 2025" },
-    { name: "Chicago",       country: "USA", region: "Americas", lat: 41.88, lng: -87.63,  note: "ADA Scientific Sessions 2025", note: "ADA Scientific Sessions 2025" },
+    { name: "Chicago",       country: "USA", region: "Americas", lat: 41.88, lng: -87.63,  note: "ADA Scientific Sessions 2025" },
     { name: "Seattle",       country: "USA", region: "Americas", lat: 47.61, lng: -122.33 },
 
     /* ── Oceania ── */

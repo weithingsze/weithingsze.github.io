@@ -339,6 +339,9 @@ footer { border-top: 1px solid var(--hairline); padding: 52px 0 68px; }
 footer .small { font-size: 0.8rem; color: var(--muted); margin-top: 34px; }
 
 /* ── Mobile ───────────────────────────────────────────────────────────── */
+/* .wrap owns the side gutters. Anything that also sets `padding` shorthand
+   would wipe them out, so vertical spacing is always set with
+   padding-top / padding-bottom, never the shorthand. */
 html, body { overflow-x: hidden; }
 img, svg { max-width: 100%; }
 
@@ -366,7 +369,7 @@ img, svg { max-width: 100%; }
   .section-title { font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 20px; }
 
   /* Hero */
-  .hero { padding: 36px 0 8px !important; gap: 34px !important; }
+  .hero { padding-top: 36px !important; padding-bottom: 8px !important; gap: 34px !important; }
   .hero h1 { font-size: clamp(2rem, 8.5vw, 2.5rem); }
   .hero p.lede { font-size: 1rem; }
   .portrait { width: 86px; height: 86px; margin-bottom: 20px; }

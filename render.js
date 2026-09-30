@@ -248,6 +248,17 @@
     }).join('');
   }
 
+  function renderCurriculum(list, target) {
+    target.innerHTML = list.map(function (c) {
+      return '<article class="listing">' +
+        '<h3>' + esc(c.title) + '</h3>' +
+        '<p class="listing-meta">' + esc(c.context || '') +
+          (c.years ? ' \u00b7 ' + esc(c.years) : '') + '</p>' +
+        (c.summary ? '<p class="listing-body">' + esc(c.summary) + '</p>' : '') +
+        '</article>';
+    }).join('');
+  }
+
   function renderLectures(list, target) {
     var g = groupByYear(list);
     target.innerHTML = g.years.map(function (y) {
@@ -422,6 +433,7 @@
     if ($('community-list') && S.community) renderCommunity(S.community, $('community-list'));
 
     if ($('course-list') && S.courses) renderCourses(S.courses, $('course-list'));
+    if ($('curriculum-list') && S.curriculum) renderCurriculum(S.curriculum, $('curriculum-list'));
     if ($('service-list') && S.service) renderService(S.service, $('service-list'));
 
     if ($('lecture-list') && S.lectures) {
