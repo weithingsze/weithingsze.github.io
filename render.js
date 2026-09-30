@@ -248,7 +248,7 @@
     }).join('');
   }
 
-  function renderCurriculum(list, target) {
+  function renderWorkshops(list, target) {
     target.innerHTML = list.map(function (c) {
       return '<article class="listing">' +
         '<h3>' + esc(c.title) + '</h3>' +
@@ -433,7 +433,7 @@
     if ($('community-list') && S.community) renderCommunity(S.community, $('community-list'));
 
     if ($('course-list') && S.courses) renderCourses(S.courses, $('course-list'));
-    if ($('curriculum-list') && S.curriculum) renderCurriculum(S.curriculum, $('curriculum-list'));
+    if ($('workshop-list') && S.workshops) renderWorkshops(S.workshops, $('workshop-list'));
     if ($('service-list') && S.service) renderService(S.service, $('service-list'));
 
     if ($('lecture-list') && S.lectures) {

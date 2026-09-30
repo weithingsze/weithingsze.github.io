@@ -78,8 +78,7 @@
       <a href="teaching.html">Teaching &amp; mentorship</a>
       <a href="awards.html">Milestones</a>
       <span class="nav-sep" aria-hidden="true"></span>
-      <a href="community.html">Community</a>
-      <a href="cities.html">Cities</a>
+      <a href="cities.html">Elsewhere</a>
       <span class="nav-sep" aria-hidden="true"></span>
       <a href="index.html#contact">Reach out</a>
     </nav>
@@ -129,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
     : '<div class="noshot">No headshot set yet</div>';
 
   /* quick facts organisers always ask for */
-  var top = (S.education && S.education[0]) || null;
   var facts = [
     ['Full name', 'Wei Thing Sze, PhD'],
     ['Title', 'Assistant Professor'],
@@ -140,12 +138,16 @@ document.addEventListener('DOMContentLoaded', function () {
       '&amp; Therapeutics (HABIT) ' +
       '(<a href="https://waki-lab.jp/">Waki DTx Lab</a>),<br>' +
       'Graduate School of Medicine,<br>The University of Tokyo</span>'],
-    ['Highest degree', top ? esc(top.degree) + ', ' + esc(top.institution) : null],
+    ['Education', (S.education || []).length
+      ? S.education.map(function (e, i) {
+          return '<span style="display:block' + (i ? ';margin-top:10px' : '') + '">' +
+            esc(e.degree) + ',<br>' + esc(e.institution) +
+            (e.place ? ' \u00b7 ' + esc(e.place) : '') + '</span>';
+        }).join('') : null],
     ['Languages', (S.languages || []).length
       ? S.languages.map(function (l) { return esc(l.name); }).join(', ') : null],
-    ['Email',
-      (S.email ? '<a href="mailto:' + esc(S.email) + '">' + esc(S.email) + '</a>' : '') +
-      (S.emailWork ? '<br><a href="mailto:' + esc(S.emailWork) + '">' + esc(S.emailWork) + '</a>' : '')],
+    ['Email', S.emailWork
+      ? '<a href="mailto:' + esc(S.emailWork) + '">' + esc(S.emailWork) + '</a>' : null],
     ['LinkedIn', S.linkedin ? '<a href="' + esc(S.linkedin) + '">Profile</a>' : null],
     ['Research profile',
       (S.scholar ? '<a href="' + esc(S.scholar) + '">Google Scholar</a>' : '') +

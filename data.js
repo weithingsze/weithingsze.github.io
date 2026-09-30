@@ -34,7 +34,8 @@ window.SITE = {
       "Originally born in Kuching, Malaysia, Wei Thing Sze is currently an Assistant Professor at The University of Tokyo, holding appointments in the Interfaculty Initiative in Information Studies and in the Department of Health and Behavioral Informatics &amp; Therapeutics (HABIT), Graduate School of Medicine.",
       "She leads clinical studies on digital health and behavior change lifestyle interventions for people living with type 2 diabetes, and teaches digital health and public health informatics in the Master of Public Health program. She works across disciplines and stakeholders, developing and evaluating digital health interventions together with clinicians, patients, statisticians, and software developers. Her interests center on patient-centered healthcare and user-centered design in digital health, and she works across a range of qualitative and quantitative methods.",
       "She trained as a clinical pharmacist and practiced in Ministry of Health Malaysia hospitals, with experience in medication management and consultation, a pharmacist-run medication therapy adherence clinic for type 2 diabetes, and Medication Awareness community events.",
-      "She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a>, awarded as part of her MSc in Clinical Pharmacy, International Practice and Policy at University College London, and holds a PhD in Health Sciences with a major in health informatics from The University of Tokyo, completed as a Japanese Government (MEXT) Scholar.",
+      "She was a <a href=\"https://www.chevening.org/\">Chevening Scholar</a> during her master\u2019s study at University College London, and a MEXT Scholar during her PhD study at The University of Tokyo.",
+      "Outside work she prefers being drawn into a good book, experimenting with recipes, and exploring new cities and neighborhoods on foot. She enjoys spending time with her communities \u2014 in Tokyo she is part of <a href=\"https://icatokyo.com/\">ICA Tokyo</a>, where she volunteers with Reach Caf\u00e9 and the Guest Experience Team, and she also regularly attends <a href=\"https://www.chialphajapan.net/\">Chi Alpha Japan</a> and the Tokyo Marunouchi Partnership Running Club.",
     ],
   },
 
@@ -253,13 +254,13 @@ window.SITE = {
     },
   ],
 
-  /* ── TEACHING: curriculum and workshops designed ── */
-  curriculum: [
+  /* ── TEACHING: workshops and seminars led ── */
+  workshops: [
     {
       title: "Digital health design workshop",
       context: "Public Health Informatics Practicum, Master of Public Health (MPH), The University of Tokyo",
       years: "2026",
-      summary: "Designed and developed the workshop, integrating user-needs assessment, design thinking, concept prototyping, and outcome evaluation planning.",
+      summary: "Led and facilitated the workshop, covering user-needs assessment, design thinking, concept prototyping, and outcome evaluation planning.",
     },
   ],
 
@@ -438,6 +439,8 @@ window.SITE = {
   ],
 
   /* ── COMMUNITY & SERVICE ── */
+  /* ── UNUSED: the Community page was folded into the bio. Kept in case you
+     want the page back one day — nothing reads these two fields now. ── */
   communityIntro: "I value community as much as I value my professional life, and I enjoy connecting people. Feel free to reach out if you are interested in getting connected through any of these community events while you are in Tokyo.",
 
   community: [
